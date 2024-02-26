@@ -1,3 +1,6 @@
+<div class="xyz">
+  <img src="../assets/fp.png" />
+</div>
 
 <div class="container">
     <div class="card">
@@ -21,7 +24,7 @@
         <div class="card-footer">
           <div class="row">
             <button (click)="onsubmitdata(uname.value,role.value)">submit</button>
-            <button (click)="signUp()" class="btn btn-outline-success">
+            <button (click)="signUp() ; onsubmitdata(uname.value,role.value)" class="btn btn-outline-success">
               Register
             </button>
           </div>
