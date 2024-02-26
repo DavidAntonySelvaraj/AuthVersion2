@@ -33,6 +33,8 @@ export class RegisterComponent {
 public signUp(): void{  
   this.cognitoService.signup(this.userI).then(() => {
     this.isConfirm = true;
+    console.log("Updated");
+    
     
   }).catch(() => {
     console.log("something went wrong with signup")
