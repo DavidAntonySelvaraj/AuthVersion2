@@ -6,11 +6,21 @@ import { FormsModule } from '@angular/forms';
 import { ReceptionistComponent } from './receptionist/receptionist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './Register/register/register.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, LoginComponent,FormsModule,ReceptionistComponent,HttpClientModule,RegisterComponent],
+  imports: [
+    RouterOutlet,
+    HomeComponent,
+    LoginComponent,
+    FormsModule,
+    ReceptionistComponent,
+    HttpClientModule,
+    RegisterComponent,
+    LogoutComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
