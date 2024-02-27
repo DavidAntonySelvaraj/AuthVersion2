@@ -15,10 +15,16 @@
         Email:<input type="email" name="email" [(ngModel)]="user.email" />
         <!-- <div class="row"> -->
         <br />
-        Password:<input type="text" name="password" [(ngModel)]="user.password" />
+        Password:<input
+          type="text"
+          name="password"
+          [(ngModel)]="user.password"
+        />
         <!-- </div> -->
-        <div class="row"></div>
+        <div class="row">
+          <a routerLink="/enter-email" class="link-primary">Forgot password</a>
         </div>
+      </div>
       <!-- <div class="card-footer"> -->
       <br /><br />
       <div class="row">

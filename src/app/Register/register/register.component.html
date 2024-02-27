@@ -3,7 +3,7 @@
 </div>
 
 <div class="container">
-    <div class="card">
+    <div class="card" *ngIf="isNotRegistered">
       <div class="card-header">
         <h1>Login</h1>
       </div>
@@ -23,7 +23,7 @@
         </div>
         <div class="card-footer">
           <div class="row">
-            <button (click)="onsubmitdata(uname.value,role.value)">submit</button>
+            <!-- <button (click)="onsubmitdata(uname.value,role.value)">submit</button> -->
             <button (click)="signUp() ; onsubmitdata(uname.value,role.value)" class="btn btn-outline-success">
               Register
             </button>
@@ -47,9 +47,9 @@
         <div class="card-footer">
           <div class="row">
             
-            <button (click)="confirmSignUp()" class="btn btn-outline-success">
-              Confirm
-            </button>
+            <form onsubmit="onsubmitdata(uname.value,role.value)">
+              <input (click)="confirmSignUp()" type="submit" value="Submit">
+            </form>
           </div>
         </div>
       </div>

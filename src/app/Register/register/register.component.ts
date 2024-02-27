@@ -17,10 +17,12 @@ import { Router } from '@angular/router';
 
 export class RegisterComponent {
   isConfirm: boolean;
+  isNotRegistered:boolean
   userI:IUser;
 
   constructor(private http:HttpClient,private router:Router,private cognitoService:CognitoService){
     this.isConfirm=false
+    this.isNotRegistered=true
     this.userI={} as IUser
   }
    user: userdetails = {
@@ -33,6 +35,7 @@ export class RegisterComponent {
 public signUp(): void{  
   this.cognitoService.signup(this.userI).then(() => {
     this.isConfirm = true;
+    this.isNotRegistered=false
     console.log("Updated");
     
     
@@ -56,7 +59,7 @@ onsubmitdata(uname:string,role:string){
     role:role
   }
   console.log(this.user)
-  this.http.post("http://localhost:8091/credentials/savecredentials",this.user).subscribe((res)=>{
+  this.http.post(this.cognitoService.dataUrl,this.user).subscribe((res)=>{
       console.log(res);
       
     },(error)=>{

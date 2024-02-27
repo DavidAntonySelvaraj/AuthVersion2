@@ -7,6 +7,7 @@ import { ReceptionistComponent } from './receptionist/receptionist.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './Register/register/register.component';
 import { LogoutComponent } from './logout/logout.component';
+import { ForgotPasswordEmailComponent } from './forgot-password-email/forgot-password-email.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { LogoutComponent } from './logout/logout.component';
     HttpClientModule,
     RegisterComponent,
     LogoutComponent,
+    ForgotPasswordEmailComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
